@@ -67,14 +67,187 @@ html {
 }
 
 body {
-  /* font-family: "Rubik", sans-serif; */
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: #333;
+  background-image: url("./img/so-white.png");
+}
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.header {
+/*////////// General styles //////////*/
+
+.centerFlex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.section {
+  padding: 3.6rem 0 3.6rem 0;
+  width: 100%;
+}
+.profileFeedGrid {
+  width: 100%;
+  height: 140vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.1rem;
+}
+.profileFeedGrid img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*////////// HEADER //////////*/
+
+.header {
+  padding-top: 2.4rem;
+  margin-bottom: 3rem;
+}
+.headerTitle {
+  flex-direction: column;
+  font-size: 6.4rem;
+  font-family: "Imperial Script", serif;
+  font-weight: 100;
+  color: rgb(128, 32, 32);
+}
+.headerTitle span:nth-child(1) {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding-bottom: 1.2rem;
+  font-family: "Playfair Display", serif;
+  transform: translateY(-0.5rem);
+}
+.headerTitle span:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: "Tinos", serif;
+}
+
+/*////////// HERO SECTION //////////*/
+
+.heroSection {
+  flex-direction: column;
+}
+.heroSection img {
+  width: 70%;
+}
+.heroSection h2 {
+  margin-bottom: 3.6rem;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.CTAContainer {
+  height: 4.8rem;
+  width: 100%;
+  background-color: brown;
+}
+.CTAContainer button {
+  height: 70%;
+  width: 40%;
+  border-radius: 9px;
+  background-color: #fff;
+  font-size: 1.4rem;
+}
+
+/*////////// HOW IT WORKS SECTION //////////*/
+
+.howItWorksSection {
+  height: 2rem;
+  width: 2rem;
+}
+
+/*////////// SERVICES SECTION //////////*/
+
+.servicesSection {
+  height: 2rem;
+  width: 2rem;
+}
+
+/*////////// EXAMPLES SECTION //////////*/
+
+.examplesSection {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  background-color: #fff;
+}
+.examplesSectionHeader {
+  font-size: 2.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.exampleInstagramProfile {
+  padding-top: 3.6rem;
+  padding-bottom: 3.6rem;
+  font-family: "Roboto", serif;
+  color: black;
+}
+.exampleInstagramProfile h1 {
+  font-size: 2rem;
+  padding-left: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.exampleSectionHeaderAndFooter {
+  width: 100%;
+  height: 0;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+  transition: all 0.5s;
+  opacity: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.exampleSectionHeader {
+  top: 0;
+  left: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.exampleSectionFooter {
+  bottom: 0;
+  left: 0;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+.exampleSectionFooterShow,
+.exampleSectionHeaderShow {
+  height: 4rem;
+  opacity: 1;
+}
+.exampleSectionHeaderAndFooter img,
+ion-icon {
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+}
+.gridActiveIcon {
+  border-bottom: 2px solid black;
+}
+
+/*////////// TESTIMONIALS SECTION //////////*/
+
+.testimonialsSection {
+  width: 100%;
+  height: 80vh;
 }
