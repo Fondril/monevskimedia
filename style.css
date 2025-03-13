@@ -22,7 +22,7 @@ Paragraph default: 1.6
 
 --- 02 COLORS
 
-- Primary: #5c0120
+- Primary: #5d0404
 - Tints:
 
 
@@ -93,7 +93,7 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4.8rem;
 }
 
 /*////////// General styles //////////*/
@@ -116,9 +116,16 @@ h2 {
   width: 100%;
   height: 100%;
 }
+.hidden {
+  visibility: hidden;
+  display: none;
+}
 
 /*////////// HEADER //////////*/
 
+.headerLogo {
+  width: 65%;
+}
 .header {
   padding-top: 2.4rem;
   margin-bottom: 3rem;
@@ -143,7 +150,7 @@ h2 {
 
 .heroSection {
   flex-direction: column;
-  margin-top: 4.8rem;
+  margin-top: 3.6rem;
 }
 .heroSection img {
   width: 70%;
@@ -158,7 +165,7 @@ h2 {
 .CTAContainer {
   height: 4.8rem;
   width: 100%;
-  background-color: #5c0120;
+  background-color: #5d0404;
 }
 .CTAContainer button {
   height: 70%;
@@ -172,17 +179,74 @@ h2 {
 /*////////// HOW IT WORKS SECTION //////////*/
 
 .howItWorksSection {
-  padding-top: 2rem;
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+.howItWorksSection h2 {
+  line-height: 1.2;
+}
+.howItWorksSectionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.howItWorksSectionStep {
+  transition: all 1ms;
+  height: fit-content;
+}
+.howItWorksSectionStepHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 2rem;
+}
+.howItWorksSectionStepHeader ion-icon {
+  color: #5d0404;
+  padding: 0;
+  margin: 0;
+  min-width: 3rem;
+  min-height: 3rem;
+  max-width: 3rem;
+  max-height: 3rem;
+}
+.howItWorksSectionStepExplanationContainer {
+  overflow: hidden;
+  max-height: 0;
+}
+.howItWorksSectionStepExplanation {
+  transition: all 1s;
+  opacity: 0;
+  z-index: -100;
+  transform: translateY(-100%);
+  line-height: 1.6;
+}
+.howItWorksSectionStepExplanationVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.howItWorksSectionStepExplanationContainerVisible {
+  max-height: fit-content;
+}
+.howItWorksSectionIntroduction,
+.howItWorksSectionConclusion {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+.howItWorksSectionIntroduction {
+  margin-bottom: 2.4rem;
+}
+.howItWorksSectionConclusion {
+  margin-top: 2.4rem;
 }
 
 /*////////// SERVICES SECTION //////////*/
 
 .servicesSection {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background-color: #5c0120;
+  padding: 2rem;
+  background-color: #5d0404;
   color: #fff;
+  font-size: 1.6rem;
 }
 
 /*////////// EXAMPLES SECTION //////////*/
@@ -257,6 +321,6 @@ ion-icon {
   height: 80vh;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: #5c0120;
+  background-color: #5d0404;
   color: #fff;
 }

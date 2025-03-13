@@ -16,11 +16,11 @@
   </head>
   <body>
     <header class="header centerFlex">
-      <h1 class="headerTitle centerFlex">
-        Monevski
-        <span>media</span>
-        <span>EST. 2024.</span>
-      </h1>
+      <img
+        src="./img/logo/MonevskiMediaLogo.png"
+        alt="MonevskiMedia logo"
+        class="headerLogo"
+      />
       <nav class="nav"></nav>
     </header>
     <main>
@@ -42,15 +42,231 @@
       </section>
 
       <section class="howItWorksSection">
-        <h2>Kako do brenda iz vaših snova?</h2>
+        <h2>Kako funkcioniše saradnja sa Monevski Media?</h2>
+        <div class="howItWorksSectionContainer">
+          <p class="howItWorksSectionIntroduction">
+            Saradnja sa mnom je jednostavna i efikasna. Cilj mi je da vaš profil
+            izgleda profesionalno, privuče pravu publiku i donese bolje
+            rezultate. Evo kako izgleda ceo proces:
+          </p>
+
+          <div id="step1" class="howItWorksSectionStep">
+            <div class="howItWorksSectionStepHeader">
+              <h3>Prvi kontakt i analiza</h3>
+              <ion-icon
+                id="step1ExpandButton"
+                onclick="expandParagraph(step1Paragraph, step1ExpandButton, step1CollapseButton, step1ParagraphContainer)"
+                class=""
+                name="chevron-down-outline"
+              ></ion-icon>
+              <ion-icon
+                id="step1CollapseButton"
+                onclick="collapseParagraph(step1Paragraph, step1ExpandButton, step1CollapseButton, step1ParagraphContainer)"
+                class="hidden"
+                name="chevron-up-outline"
+              ></ion-icon>
+            </div>
+            <div
+              id="step1ParagraphContainer"
+              class="howItWorksSectionStepExplanationContainer"
+            >
+              <p id="step1Paragraph" class="howItWorksSectionStepExplanation">
+                Nakon što mi se javite, upoznajem se sa vašim biznisom,
+                ciljevima i dosadašnjim sadržajem. Na osnovu toga pravim predlog
+                strategije koja najbolje odgovara vašem brendu.
+              </p>
+            </div>
+          </div>
+
+          <div id="step2" class="howItWorksSectionStep">
+            <div class="howItWorksSectionStepHeader">
+              <h3>Dostava materijal</h3>
+              <ion-icon
+                id="step2ExpandButton"
+                onclick="expandParagraph(step2Paragraph, step2ExpandButton, step2CollapseButton, step2ParagraphContainer)"
+                class=""
+                name="chevron-down-outline"
+              ></ion-icon>
+              <ion-icon
+                id="step2CollapseButton"
+                onclick="collapseParagraph(step2Paragraph, step2ExpandButton, step2CollapseButton, step2ParagraphContainer)"
+                class="hidden"
+                name="chevron-up-outline"
+              ></ion-icon>
+            </div>
+            <div
+              id="step2ParagraphContainer"
+              class="howItWorksSectionStepExplanationContainer"
+            >
+              <p id="step2Paragraph" class="howItWorksSectionStepExplanation">
+                Klijent dostavlja sve relevantne materijale – fotografije, video
+                sadržaj, informacije o proizvodima/uslugama i druge važne
+                detalje. Ako je potrebno, dajem savete kako da materijal bude
+                što kvalitetniji.
+              </p>
+            </div>
+          </div>
+
+          <div id="step3" class="howItWorksSectionStep">
+            <div class="howItWorksSectionStepHeader">
+              <h3>Kreiranje vizuelnog identiteta i sadržaja</h3>
+              <ion-icon
+                id="step3ExpandButton"
+                onclick="expandParagraph(step3Paragraph, step3ExpandButton, step3CollapseButton, step3ParagraphContainer)"
+                class=""
+                name="chevron-down-outline"
+              ></ion-icon>
+              <ion-icon
+                id="step3CollapseButton"
+                onclick="collapseParagraph(step3Paragraph, step3ExpandButton, step3CollapseButton, step3ParagraphContainer)"
+                class="hidden"
+                name="chevron-up-outline"
+              ></ion-icon>
+            </div>
+            <div
+              id="step3ParagraphContainer"
+              class="howItWorksSectionStepExplanationContainer"
+            >
+              <p id="step3Paragraph" class="howItWorksSectionStepExplanation">
+                Na osnovu dobijenih materijala i dogovorene strategije, pravim
+                predlog izgleda profila, uključujući stil objava, ton
+                komunikacije i vizuelni identitet.
+              </p>
+            </div>
+          </div>
+
+          <div id="step4" class="howItWorksSectionStep">
+            <div class="howItWorksSectionStepHeader">
+              <h3>Pregled i odobrenje</h3>
+              <ion-icon
+                id="step4ExpandButton"
+                onclick="expandParagraph(step4Paragraph, step4ExpandButton, step4CollapseButton, step4ParagraphContainer)"
+                class=""
+                name="chevron-down-outline"
+              ></ion-icon>
+              <ion-icon
+                id="step4CollapseButton"
+                onclick="collapseParagraph(step4Paragraph, step4ExpandButton, step4CollapseButton, step4ParagraphContainer)"
+                class="hidden"
+                name="chevron-up-outline"
+              ></ion-icon>
+            </div>
+            <div
+              id="step4ParagraphContainer"
+              class="howItWorksSectionStepExplanationContainer"
+            >
+              <p id="step4Paragraph" class="howItWorksSectionStepExplanation">
+                Klijent dobija sadržaj na pregled pre objavljivanja. U ovoj fazi
+                može da predloži izmene ili potvrdi da je sve u skladu s
+                očekivanjima.
+              </p>
+            </div>
+          </div>
+
+          <div id="step5" class="howItWorksSectionStep">
+            <div class="howItWorksSectionStepHeader">
+              <h3>Objavljivanje i optimizacija</h3>
+              <ion-icon
+                id="step5ExpandButton"
+                onclick="expandParagraph(step5Paragraph, step5ExpandButton, step5CollapseButton, step5ParagraphContainer)"
+                class=""
+                name="chevron-down-outline"
+              ></ion-icon>
+              <ion-icon
+                id="step5CollapseButton"
+                onclick="collapseParagraph(step5Paragraph, step5ExpandButton, step5CollapseButton, step5ParagraphContainer)"
+                class="hidden"
+                name="chevron-up-outline"
+              ></ion-icon>
+            </div>
+            <div
+              id="step5ParagraphContainer"
+              class="howItWorksSectionStepExplanationContainer"
+            >
+              <p id="step5Paragraph" class="howItWorksSectionStepExplanation">
+                Nakon odobrenja, preuzimam kompletno upravljanje profilom –
+                redovno objavljivanje, optimizaciju haštagova i opisnih
+                tekstova, interakciju sa publikom i sve druge ključne
+                aktivnosti.
+              </p>
+            </div>
+          </div>
+
+          <div id="step6" class="howItWorksSectionStep">
+            <div class="howItWorksSectionStepHeader">
+              <h3>Praćenje rezultata i optimizacija strategije</h3>
+              <ion-icon
+                id="step6ExpandButton"
+                onclick="expandParagraph(step6Paragraph, step6ExpandButton, step6CollapseButton, step6ParagraphContainer)"
+                class=""
+                name="chevron-down-outline"
+              ></ion-icon>
+              <ion-icon
+                id="step6CollapseButton"
+                onclick="collapseParagraph(step6Paragraph, step6ExpandButton, step6CollapseButton, step6ParagraphContainer)"
+                class="hidden"
+                name="chevron-up-outline"
+              ></ion-icon>
+            </div>
+            <div
+              id="step6ParagraphContainer"
+              class="howItWorksSectionStepExplanationContainer"
+            >
+              <p id="step6Paragraph" class="howItWorksSectionStepExplanation">
+                Na kraju svakog meseca radim analizu učinka i šaljem izveštaj o
+                rastu profila, angažovanju publike i predlozima za dalja
+                poboljšanja.
+              </p>
+            </div>
+          </div>
+
+          <p class="howItWorksSectionConclusion">
+            Na ovaj način, vaš profil se razvija u pravom smeru, a vi štedite
+            vreme i dobijate kvalitetan sadržaj koji donosi rezultate.
+          </p>
+          <!-- 
+          Ako imate dodatna pitanja ili želite da započnemo saradnju, slobodno mi se javite! -->
+        </div>
       </section>
       <section class="servicesSection">
         <h2>Paketi usluga</h2>
+        <div class="">
+          <div>
+            <h3>Paket 150€ (Osnovni paket)</h3>
+            <div>
+              12 postova mesečno<br />
+              Dizajn i copywriting za postove<br />
+              Osnovna optimizacija haštagova<br />
+              Analiza i sugestije za poboljšanje sadržaja
+            </div>
+          </div>
+          <div>
+            <h3>Paket 200€ (Napredni paket)</h3>
+            <div>
+              18 postova mesečno<br />
+              Dizajn i copywriting za postove<br />
+              Optimizacija haštagova i opisnih tekstova<br />
+              Analiza i mesečni izveštaj o rastu profila<br />
+              Story strategija – predlozi za angažovanje publike
+            </div>
+          </div>
+          <div>
+            <h3>Paket 300€ (Premium paket + reklame)</h3>
+            <div>
+              Svakodnevno objavljivanje<br />
+              Dizajn i copywriting za postove i storije<br />
+              Napredna optimizacija haštagova i opisnih tekstova<br />
+              Mesečna analiza i konsultacije za rast profila<br />
+              Strategija za povećanje engagementa i rasta profila<br />
+              Uključene reklame (budžet za promociju postova)
+            </div>
+          </div>
+        </div>
       </section>
       <section id="examplesSection" class="examplesSection">
-        <h2 class="examplesSectionHeader">Primeri izgleda feeda</h2>
+        <h2>Primeri izgleda feeda</h2>
         <div class="exampleInstagramProfile">
-          <h1>nikolijamahmut</h1>
+          <h1>ordinacija.pg</h1>
           <div class="profileFeedGrid">
             <img
               class="profileFeedGridImage"
@@ -100,7 +316,7 @@
           </div>
         </div>
         <div class="exampleInstagramProfile">
-          <h1>moderandom</h1>
+          <h1>hotspot.belgrade</h1>
           <div class="profileFeedGrid">
             <img
               class="profileFeedGridImage"
@@ -150,7 +366,7 @@
           </div>
         </div>
         <div class="exampleInstagramProfile">
-          <h1>pilatesbez_granica</h1>
+          <h1>elitnes_pilates_studio</h1>
           <div class="profileFeedGrid">
             <img
               class="profileFeedGridImage"
@@ -244,33 +460,5 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
   </body>
-  <script defer>
-    const exampleSectionElement = document.getElementById("examplesSection");
-    const exampleSectionObserver = new IntersectionObserver(
-      function (entries) {
-        const ent = entries[0];
-        if (ent.isIntersecting === true) {
-          document
-            .getElementById("exampleSectionHeader")
-            .classList.add("exampleSectionHeaderShow");
-          document
-            .getElementById("exampleSectionFooter")
-            .classList.add("exampleSectionFooterShow");
-        }
-        if (ent.isIntersecting === false) {
-          const headerElement = document
-            .getElementById("exampleSectionHeader")
-            .classList.remove("exampleSectionHeaderShow");
-          document
-            .getElementById("exampleSectionFooter")
-            .classList.remove("exampleSectionFooterShow");
-        }
-      },
-      {
-        root: null,
-        threshold: 0.35,
-      }
-    );
-    exampleSectionObserver.observe(exampleSectionElement);
-  </script>
+  <script defer src="./logic.js"></script>
 </html>
