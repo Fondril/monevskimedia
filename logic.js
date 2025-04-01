@@ -1,23 +1,23 @@
 //// Adding Instagram view on examples section
 
-const exampleSectionElement = document.getElementById("examplesSection");
+const exampleSectionElement = document.getElementById("examples-section");
 const exampleSectionObserver = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
     if (ent.isIntersecting === true) {
       document
-        .getElementById("exampleSectionHeader")
+        .getElementById("example-section-header")
         .classList.add("exampleSectionHeaderShow");
       document
-        .getElementById("exampleSectionFooter")
+        .getElementById("example-section-footer")
         .classList.add("exampleSectionFooterShow");
     }
     if (ent.isIntersecting === false) {
       document
-        .getElementById("exampleSectionHeader")
+        .getElementById("example-section-header")
         .classList.remove("exampleSectionHeaderShow");
       document
-        .getElementById("exampleSectionFooter")
+        .getElementById("example-section-footer")
         .classList.remove("exampleSectionFooterShow");
     }
   },
@@ -28,33 +28,76 @@ const exampleSectionObserver = new IntersectionObserver(
 );
 exampleSectionObserver.observe(exampleSectionElement);
 
-//// Expanding and colapsing howItWorksSectionSteps
+//// EXPANDING AND COLLAPSING HOW IT WORKS SECTION STEPS
 
 function expandParagraph(
-  ParagraphElement,
-  expandButtonElement,
-  collapseButtonElement,
-  paragraphContainerElement
+  stepElementID,
+  chevronElementID,
+  paragraphContainerElementID
 ) {
-  // ParagraphElement.classList.remove("howItWorksSectionStepExplanationHidden");
-  paragraphContainerElement.classList.add(
-    "howItWorksSectionStepExplanationContainerVisible"
+  //// CHANGING FUNCTION FROM EXPAND TO COLLAPSE
+  document.getElementById(stepElementID).onclick = function () {
+    collapseParagraph(
+      stepElementID,
+      chevronElementID,
+      paragraphContainerElementID
+    );
+  };
+
+  //// ROTATING CHEVRON
+  document.getElementById(chevronElementID).style.transform = "rotateX(180deg)";
+
+  //// EXPANDING PARAGRAPH
+  let paragraphContainerElement = document.getElementById(
+    paragraphContainerElementID
   );
-  ParagraphElement.classList.add("howItWorksSectionStepExplanationVisible");
-  expandButtonElement.classList.add("hidden");
-  collapseButtonElement.classList.remove("hidden");
+  paragraphContainerElement.classList.toggle(
+    "how-it-works-section-step-explanation-open"
+  );
+  if (
+    paragraphContainerElement.classList.contains(
+      "how-it-works-section-step-explanation-open"
+    )
+  ) {
+    paragraphContainerElement.style.maxHeight =
+      paragraphContainerElement.scrollHeight + "px";
+  } else {
+    paragraphContainerElement.style.maxHeight = "0px";
+  }
 }
+
 function collapseParagraph(
-  ParagraphElement,
-  expandButtonElement,
-  collapseButtonElement,
-  paragraphContainerElement
+  stepElementID,
+  chevronElementID,
+  paragraphContainerElementID
 ) {
-  // ParagraphElement.classList.add("howItWorksSectionStepExplanationHidden");
-  paragraphContainerElement.classList.remove(
-    "howItWorksSectionStepExplanationContainerVisible"
+  //// CHANGING FUNCTION FROM COLLAPSE TO EXPAND
+  document.getElementById(stepElementID).onclick = function () {
+    expandParagraph(
+      stepElementID,
+      chevronElementID,
+      paragraphContainerElementID
+    );
+  };
+
+  //// ROTATING CHEVRON
+  document.getElementById(chevronElementID).style.transform = "rotateX(360deg)";
+
+  //// COLLAPSING PARAGRAPH
+  let paragraphContainerElement = document.getElementById(
+    paragraphContainerElementID
   );
-  ParagraphElement.classList.remove("howItWorksSectionStepExplanationVisible");
-  expandButtonElement.classList.remove("hidden");
-  collapseButtonElement.classList.add("hidden");
+  paragraphContainerElement.classList.toggle(
+    "how-it-works-section-step-explanation-open"
+  );
+  if (
+    paragraphContainerElement.classList.contains(
+      "how-it-works-section-step-explanation-open"
+    )
+  ) {
+    paragraphContainerElement.style.maxHeight =
+      paragraphContainerElement.scrollHeight + "px";
+  } else {
+    paragraphContainerElement.style.maxHeight = "0px";
+  }
 }

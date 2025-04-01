@@ -6,7 +6,7 @@
     <meta name="description" content="" />
     <title>MonevskiMedia</title>
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,12 +19,13 @@
       <img
         src="./img/logo/MonevskiMediaLogo.png"
         alt="MonevskiMedia logo"
-        class="headerLogo"
+        class="header-logo"
       />
       <nav class="nav"></nav>
     </header>
     <main>
-      <section class="heroSection centerFlex">
+      <!-- HERO SECTION -->
+      <section class="hero-section centerFlex">
         <h2 style="text-transform: uppercase">
           Da li želite uređen Instagram profil?
         </h2>
@@ -32,7 +33,7 @@
           src="./img/hero-phone-image.png"
           alt="Demonstrativna slika Instagram profila"
         />
-        <div class="CTAContainer centerFlex">
+        <div class="CTA-container centerFlex">
           <button>
             <a href="https://ig.me/m/monevskimedia" target="_blank"
               >Message on Instagram</a
@@ -41,36 +42,36 @@
         </div>
       </section>
 
-      <section class="howItWorksSection">
+      <!-- HOW IT WORKS SECTION BEO LOCKED-->
+      <section class="how-it-works-section">
         <h2>Kako funkcioniše saradnja sa Monevski Media?</h2>
-        <div class="howItWorksSectionContainer">
-          <p class="howItWorksSectionIntroduction">
-            Saradnja sa mnom je jednostavna i efikasna. Cilj mi je da vaš profil
-            izgleda profesionalno, privuče pravu publiku i donese bolje
-            rezultate. Evo kako izgleda ceo proces:
-          </p>
 
-          <div id="step1" class="howItWorksSectionStep">
-            <div class="howItWorksSectionStepHeader">
+        <p class="how-it-works-section-introduction">
+          Saradnja sa mnom je jednostavna i efikasna. Cilj mi je da vaš profil
+          izgleda profesionalno, privuče pravu publiku i donese bolje rezultate.
+          Evo kako izgleda ceo proces:
+        </p>
+
+        <div class="how-it-works-section-step-container">
+          <!-- STEP 1 -->
+          <div
+            id="how-it-works-section-step1"
+            class="how-it-works-section-step"
+            onclick="expandParagraph(`how-it-works-section-step1`, `how-it-works-section-step1-chevron`, `how-it-works-step1-paragraph-container`)"
+          >
+            <div class="how-it-works-section-step-header">
               <h3>Prvi kontakt i analiza</h3>
-              <ion-icon
-                id="step1ExpandButton"
-                onclick="expandParagraph(step1Paragraph, step1ExpandButton, step1CollapseButton, step1ParagraphContainer)"
-                class=""
-                name="chevron-down-outline"
-              ></ion-icon>
-              <ion-icon
-                id="step1CollapseButton"
-                onclick="collapseParagraph(step1Paragraph, step1ExpandButton, step1CollapseButton, step1ParagraphContainer)"
-                class="hidden"
-                name="chevron-up-outline"
-              ></ion-icon>
+              <img
+                id="how-it-works-section-step1-chevron"
+                src="./img/icons/chevron.png"
+                alt="Strelica za opadajuci opis"
+              />
             </div>
             <div
-              id="step1ParagraphContainer"
-              class="howItWorksSectionStepExplanationContainer"
+              id="how-it-works-step1-paragraph-container"
+              class="how-it-works-section-step-explanation-container"
             >
-              <p id="step1Paragraph" class="howItWorksSectionStepExplanation">
+              <p>
                 Nakon što mi se javite, upoznajem se sa vašim biznisom,
                 ciljevima i dosadašnjim sadržajem. Na osnovu toga pravim predlog
                 strategije koja najbolje odgovara vašem brendu.
@@ -78,27 +79,25 @@
             </div>
           </div>
 
-          <div id="step2" class="howItWorksSectionStep">
-            <div class="howItWorksSectionStepHeader">
+          <!-- STEP 2 -->
+          <div
+            id="how-it-works-section-step2"
+            class="how-it-works-section-step"
+            onclick="expandParagraph(`how-it-works-section-step2`, `how-it-works-section-step2-chevron`, `how-it-works-step2-paragraph-container`)"
+          >
+            <div class="how-it-works-section-step-header">
               <h3>Dostava materijal</h3>
-              <ion-icon
-                id="step2ExpandButton"
-                onclick="expandParagraph(step2Paragraph, step2ExpandButton, step2CollapseButton, step2ParagraphContainer)"
-                class=""
-                name="chevron-down-outline"
-              ></ion-icon>
-              <ion-icon
-                id="step2CollapseButton"
-                onclick="collapseParagraph(step2Paragraph, step2ExpandButton, step2CollapseButton, step2ParagraphContainer)"
-                class="hidden"
-                name="chevron-up-outline"
-              ></ion-icon>
+              <img
+                id="how-it-works-section-step2-chevron"
+                src="./img/icons/chevron.png"
+                alt="Strelica za opadajuci opis"
+              />
             </div>
             <div
-              id="step2ParagraphContainer"
-              class="howItWorksSectionStepExplanationContainer"
+              id="how-it-works-step2-paragraph-container"
+              class="how-it-works-section-step-explanation-container"
             >
-              <p id="step2Paragraph" class="howItWorksSectionStepExplanation">
+              <p>
                 Klijent dostavlja sve relevantne materijale – fotografije, video
                 sadržaj, informacije o proizvodima/uslugama i druge važne
                 detalje. Ako je potrebno, dajem savete kako da materijal bude
@@ -107,27 +106,25 @@
             </div>
           </div>
 
-          <div id="step3" class="howItWorksSectionStep">
-            <div class="howItWorksSectionStepHeader">
+          <!-- STEP 3 -->
+          <div
+            id="how-it-works-section-step3"
+            class="how-it-works-section-step"
+            onclick="expandParagraph(`how-it-works-section-step3`, `how-it-works-section-step3-chevron`, `how-it-works-step3-paragraph-container`)"
+          >
+            <div class="how-it-works-section-step-header">
               <h3>Kreiranje vizuelnog identiteta i sadržaja</h3>
-              <ion-icon
-                id="step3ExpandButton"
-                onclick="expandParagraph(step3Paragraph, step3ExpandButton, step3CollapseButton, step3ParagraphContainer)"
-                class=""
-                name="chevron-down-outline"
-              ></ion-icon>
-              <ion-icon
-                id="step3CollapseButton"
-                onclick="collapseParagraph(step3Paragraph, step3ExpandButton, step3CollapseButton, step3ParagraphContainer)"
-                class="hidden"
-                name="chevron-up-outline"
-              ></ion-icon>
+              <img
+                id="how-it-works-section-step3-chevron"
+                src="./img/icons/chevron.png"
+                alt="Strelica za opadajuci opis"
+              />
             </div>
             <div
-              id="step3ParagraphContainer"
-              class="howItWorksSectionStepExplanationContainer"
+              id="how-it-works-step3-paragraph-container"
+              class="how-it-works-section-step-explanation-container"
             >
-              <p id="step3Paragraph" class="howItWorksSectionStepExplanation">
+              <p>
                 Na osnovu dobijenih materijala i dogovorene strategije, pravim
                 predlog izgleda profila, uključujući stil objava, ton
                 komunikacije i vizuelni identitet.
@@ -135,27 +132,25 @@
             </div>
           </div>
 
-          <div id="step4" class="howItWorksSectionStep">
-            <div class="howItWorksSectionStepHeader">
+          <!-- STEP 4 -->
+          <div
+            id="how-it-works-section-step4"
+            class="how-it-works-section-step"
+            onclick="expandParagraph(`how-it-works-section-step4`, `how-it-works-section-step4-chevron`, `how-it-works-step4-paragraph-container`)"
+          >
+            <div class="how-it-works-section-step-header">
               <h3>Pregled i odobrenje</h3>
-              <ion-icon
-                id="step4ExpandButton"
-                onclick="expandParagraph(step4Paragraph, step4ExpandButton, step4CollapseButton, step4ParagraphContainer)"
-                class=""
-                name="chevron-down-outline"
-              ></ion-icon>
-              <ion-icon
-                id="step4CollapseButton"
-                onclick="collapseParagraph(step4Paragraph, step4ExpandButton, step4CollapseButton, step4ParagraphContainer)"
-                class="hidden"
-                name="chevron-up-outline"
-              ></ion-icon>
+              <img
+                id="how-it-works-section-step4-chevron"
+                src="./img/icons/chevron.png"
+                alt="Strelica za opadajuci opis"
+              />
             </div>
             <div
-              id="step4ParagraphContainer"
-              class="howItWorksSectionStepExplanationContainer"
+              id="how-it-works-step4-paragraph-container"
+              class="how-it-works-section-step-explanation-container"
             >
-              <p id="step4Paragraph" class="howItWorksSectionStepExplanation">
+              <p>
                 Klijent dobija sadržaj na pregled pre objavljivanja. U ovoj fazi
                 može da predloži izmene ili potvrdi da je sve u skladu s
                 očekivanjima.
@@ -163,27 +158,25 @@
             </div>
           </div>
 
-          <div id="step5" class="howItWorksSectionStep">
-            <div class="howItWorksSectionStepHeader">
+          <!-- STEP 5 -->
+          <div
+            id="how-it-works-section-step5"
+            class="how-it-works-section-step"
+            onclick="expandParagraph(`how-it-works-section-step5`, `how-it-works-section-step5-chevron`, `how-it-works-step5-paragraph-container`)"
+          >
+            <div class="how-it-works-section-step-header">
               <h3>Objavljivanje i optimizacija</h3>
-              <ion-icon
-                id="step5ExpandButton"
-                onclick="expandParagraph(step5Paragraph, step5ExpandButton, step5CollapseButton, step5ParagraphContainer)"
-                class=""
-                name="chevron-down-outline"
-              ></ion-icon>
-              <ion-icon
-                id="step5CollapseButton"
-                onclick="collapseParagraph(step5Paragraph, step5ExpandButton, step5CollapseButton, step5ParagraphContainer)"
-                class="hidden"
-                name="chevron-up-outline"
-              ></ion-icon>
+              <img
+                id="how-it-works-section-step5-chevron"
+                src="./img/icons/chevron.png"
+                alt="Strelica za opadajuci opis"
+              />
             </div>
             <div
-              id="step5ParagraphContainer"
-              class="howItWorksSectionStepExplanationContainer"
+              id="how-it-works-step5-paragraph-container"
+              class="how-it-works-section-step-explanation-container"
             >
-              <p id="step5Paragraph" class="howItWorksSectionStepExplanation">
+              <p>
                 Nakon odobrenja, preuzimam kompletno upravljanje profilom –
                 redovno objavljivanje, optimizaciju haštagova i opisnih
                 tekstova, interakciju sa publikom i sve druge ključne
@@ -192,27 +185,25 @@
             </div>
           </div>
 
-          <div id="step6" class="howItWorksSectionStep">
-            <div class="howItWorksSectionStepHeader">
+          <!-- STEP 6 -->
+          <div
+            id="how-it-works-section-step6"
+            class="how-it-works-section-step"
+            onclick="expandParagraph(`how-it-works-section-step6`, `how-it-works-section-step6-chevron`, `how-it-works-step6-paragraph-container`)"
+          >
+            <div class="how-it-works-section-step-header">
               <h3>Praćenje rezultata i optimizacija strategije</h3>
-              <ion-icon
-                id="step6ExpandButton"
-                onclick="expandParagraph(step6Paragraph, step6ExpandButton, step6CollapseButton, step6ParagraphContainer)"
-                class=""
-                name="chevron-down-outline"
-              ></ion-icon>
-              <ion-icon
-                id="step6CollapseButton"
-                onclick="collapseParagraph(step6Paragraph, step6ExpandButton, step6CollapseButton, step6ParagraphContainer)"
-                class="hidden"
-                name="chevron-up-outline"
-              ></ion-icon>
+              <img
+                id="how-it-works-section-step6-chevron"
+                src="./img/icons/chevron.png"
+                alt="Strelica za opadajuci opis"
+              />
             </div>
             <div
-              id="step6ParagraphContainer"
-              class="howItWorksSectionStepExplanationContainer"
+              id="how-it-works-step6-paragraph-container"
+              class="how-it-works-section-step-explanation-container"
             >
-              <p id="step6Paragraph" class="howItWorksSectionStepExplanation">
+              <p>
                 Na kraju svakog meseca radim analizu učinka i šaljem izveštaj o
                 rastu profila, angažovanju publike i predlozima za dalja
                 poboljšanja.
@@ -220,203 +211,178 @@
             </div>
           </div>
 
-          <p class="howItWorksSectionConclusion">
-            Na ovaj način, vaš profil se razvija u pravom smeru, a vi štedite
-            vreme i dobijate kvalitetan sadržaj koji donosi rezultate.
-          </p>
           <!-- 
-          Ako imate dodatna pitanja ili želite da započnemo saradnju, slobodno mi se javite! -->
+            Ako imate dodatna pitanja ili želite da započnemo saradnju, slobodno mi se javite! -->
         </div>
+
+        <p class="how-it-works-section-conclusion">
+          Na ovaj način, vaš profil se razvija u pravom smeru, a vi štedite
+          vreme i dobijate kvalitetan sadržaj koji donosi rezultate.
+        </p>
       </section>
-      <section class="servicesSection">
-        <h2>Paketi usluga</h2>
-        <div class="">
-          <div>
-            <h3>Paket 150€ (Osnovni paket)</h3>
-            <div>
-              12 postova mesečno<br />
-              Dizajn i copywriting za postove<br />
-              Osnovna optimizacija haštagova<br />
-              Analiza i sugestije za poboljšanje sadržaja
-            </div>
-          </div>
-          <div>
-            <h3>Paket 200€ (Napredni paket)</h3>
-            <div>
-              18 postova mesečno<br />
-              Dizajn i copywriting za postove<br />
-              Optimizacija haštagova i opisnih tekstova<br />
-              Analiza i mesečni izveštaj o rastu profila<br />
-              Story strategija – predlozi za angažovanje publike
-            </div>
-          </div>
-          <div>
-            <h3>Paket 300€ (Premium paket + reklame)</h3>
-            <div>
-              Svakodnevno objavljivanje<br />
-              Dizajn i copywriting za postove i storije<br />
-              Napredna optimizacija haštagova i opisnih tekstova<br />
-              Mesečna analiza i konsultacije za rast profila<br />
-              Strategija za povećanje engagementa i rasta profila<br />
-              Uključene reklame (budžet za promociju postova)
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="examplesSection" class="examplesSection">
+
+      <!-- EXAMPLES SECTION BEO CRVEN-->
+      <section id="examples-section" class="examples-section">
         <h2>Primeri izgleda feeda</h2>
-        <div class="exampleInstagramProfile">
-          <h1>ordinacija.pg</h1>
-          <div class="profileFeedGrid">
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
+        <div class="examples-section-examples-container">
+          <!-- EXAMPLE 1 -->
+          <div class="example-section-instagram-profile">
+            <h1>ordinacija.pg</h1>
+            <div class="profileFeedGrid">
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+            </div>
+          </div>
+          <!-- EXAMPLE 1 -->
+          <div class="example-section-instagram-profile">
+            <h1>hotspot.belgrade</h1>
+            <div class="profileFeedGrid">
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+            </div>
+          </div>
+          <!-- EXAMPLE 1 -->
+          <div class="example-section-instagram-profile">
+            <h1>elitnes_pilates_studio</h1>
+            <div class="profileFeedGrid">
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+              <img
+                class="profileFeedGridImage"
+                src="./img/examplePhoto.png"
+                alt="Slika iz primera preradjenog Instagram profila"
+              />
+            </div>
           </div>
         </div>
-        <div class="exampleInstagramProfile">
-          <h1>hotspot.belgrade</h1>
-          <div class="profileFeedGrid">
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-          </div>
-        </div>
-        <div class="exampleInstagramProfile">
-          <h1>elitnes_pilates_studio</h1>
-          <div class="profileFeedGrid">
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-            <img
-              class="profileFeedGridImage"
-              src="./img/examplePhoto.png"
-              alt="Slika iz primera preradjenog Instagram profila"
-            />
-          </div>
-        </div>
+
+        <!-- INSTAGRAM LOOK PREVIEW HEADER AND FOOTER -->
         <div
-          id="exampleSectionHeader"
+          id="example-section-header"
           class="exampleSectionHeaderAndFooter exampleSectionHeader"
         >
           <img
@@ -431,7 +397,7 @@
           <img src="./img/instagramIcons/follower.png" alt="Instagram icon" />
         </div>
         <div
-          id="exampleSectionFooter"
+          id="example-section-footer"
           class="exampleSectionHeaderAndFooter exampleSectionFooter"
         >
           <img src="./img/instagramIcons/home.png" alt="Instagram icon" />
@@ -447,8 +413,117 @@
           <img src="./img/instagramIcons/user.png" alt="Instagram icon" />
         </div>
       </section>
-      <section class="testimonialsSection">
+
+      <!-- TESTIMONIALS SECTION CRVEN-->
+      <section class="testimonials-section">
         <h2>Recenzije</h2>
+        <div class="testimonials-section-testimonial-container">
+          <figure>
+            <p>&mdash; Milan R.</p>
+            <div>
+              <img
+                src="./img/testimonials-images/ben.jpg"
+                alt="Slika zadovoljne mušterije"
+              />
+              <blockquote>
+                Od početka saradnje sve je bilo jasno i profesionalno. Poslao
+                sam materijale, a ubrzo sam dobio predlog izgleda profila i
+                strategije. Sada konačno imam vizuelno usklađen i atraktivan
+                Instagram!
+              </blockquote>
+            </div>
+          </figure>
+          <figure>
+            <p>&mdash; Jelena S.</p>
+            <div>
+              <img
+                src="./img/testimonials-images/dave.jpg"
+                alt="Slika zadovoljne mušterije"
+              />
+              <blockquote>
+                Najviše mi se dopalo to što nisam morala da brinem ni o čemu.
+                Samo sam dostavila osnovne informacije, a zauzvrat sam dobila
+                osmišljen sadržaj i predloge za poboljšanje. Objave su sada
+                redovne i konačno imamo angažovanu publiku!
+              </blockquote>
+            </div>
+          </figure>
+          <figure>
+            <p>&mdash; Marko T.</p>
+            <div>
+              <img
+                src="./img/testimonials-images/hannah.jpg"
+                alt="Slika zadovoljne mušterije"
+              />
+              <blockquote>
+                Odlična komunikacija i brzina! Svaki mesec dobijam predlog
+                postova unapred, mogu da predložim izmene, ali uglavnom sve bude
+                savršeno već iz prvog pokušaja. Plus, analize koje dobijamo su
+                jako korisne.
+              </blockquote>
+            </div>
+          </figure>
+          <figure>
+            <p>&mdash; Ana M.</p>
+            <div>
+              <img
+                src="./img/testimonials-images/steve.jpg"
+                alt="Slika zadovoljne mušterije"
+              />
+              <blockquote>
+                Saradnja je jednostavna i bez stresa. Nakon početnog dogovora,
+                dobijam sve spremno na pregled i ne gubim vreme na razmišljanje
+                o objavama. Profil nam sada izgleda profesionalno, a pratimo i
+                rast iz meseca u mesec.
+              </blockquote>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION BEO-->
+      <section class="services-section">
+        <h2>Paketi usluga</h2>
+        <div class="services-section-container">
+          <!-- PACKAGE 1 -->
+          <div class="services-section-package">
+            <h4>Osnovni paket</h4>
+            <h3>150€</h3>
+            <div class="services-section-package-details">
+              <p>12 postova mesečno</p>
+              <p>Dizajn i copywriting za postove</p>
+              <p>Osnovna optimizacija haštagova</p>
+              <p>Analiza i sugestije za poboljšanje sadržaja</p>
+            </div>
+          </div>
+
+          <!-- PACKAGE 2 -->
+          <div class="services-section-package">
+            <h4>Napredni paket</h4>
+            <h3>200€</h3>
+            <div class="services-section-package-details">
+              <p>18 postova mesečno</p>
+              <p>Dizajn i copywriting za postove</p>
+              <p>Optimizacija haštagova i opisnih tekstova</p>
+              <p>Analiza i mesečni izveštaj o rastu profila</p>
+              <p>Story strategija – predlozi za angažovanje publike</p>
+            </div>
+          </div>
+
+          <!-- PACKAGE 3 -->
+          <div class="services-section-package">
+            <h4>Premium paket</h4>
+            <h3>300€</h3>
+            <div class="services-section-package-details">
+              <p>Svakodnevno objavljivanje</p>
+              <p>Dizajn i copywriting za postove i storije</p>
+              <p>Napredna optimizacija haštagova i opisnih tekstova</p>
+              <p>Mesečna analiza i konsultacije za rast profila</p>
+              <p>Strategija za povećanje engagementa i rasta profila</p>
+              <p>Uključene reklame (budžet za promociju postova)</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script
