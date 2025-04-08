@@ -23,11 +23,14 @@ Paragraph default: 1.6
 --- 02 COLORS
 */
 $primary-color: #5d0404;
+$primary-color-background: #5d0404db;
 /*
 - Tints:
 
 - Shades: 
-
+*/
+$primary-color-shade1: #4a0303;
+/*
 - Accents:
 - Greys
 
@@ -63,6 +66,7 @@ html {
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -122,11 +126,122 @@ h2 {
 
 /*////////// HEADER //////////*/
 
+$nav-button-height: 5.5rem;
+$nav-button-width: 5.5rem;
+$nav-button-top-distance: 3rem;
+$nav-button-right-distance: 3rem;
+
 .header {
   padding-top: 2.4rem;
   margin-bottom: 3rem;
   .header-logo {
     width: 65%;
+  }
+  .nav {
+    input {
+      display: none;
+    }
+    label {
+      position: fixed;
+      top: $nav-button-top-distance;
+      right: $nav-button-right-distance;
+      width: $nav-button-width;
+      height: $nav-button-height;
+      z-index: 10000;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: $primary-color-shade1;
+      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+      .nav-icon,
+      .nav-icon::before,
+      .nav-icon::after {
+        background-color: #fff;
+        width: 3rem;
+        height: 2px;
+        position: absolute;
+        display: inline-block;
+      }
+      .nav-icon {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+      }
+      .nav-icon::before,
+      .nav-icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease;
+      }
+      .nav-icon::before {
+        top: -0.8rem;
+      }
+      .nav-icon::after {
+        top: 0.8rem;
+      }
+    }
+    .nav-checkbox:checked + .nav-button > .nav-icon::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+    .nav-checkbox:checked + .nav-button > .nav-icon::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+    .nav-checkbox:checked + .nav-button > .nav-icon {
+      background-color: $primary-color-shade1;
+    }
+    .nav-background {
+      height: calc($nav-button-height - 1rem);
+      width: calc($nav-button-width - 1rem);
+      top: calc($nav-button-top-distance + 0.5rem);
+      right: calc($nav-button-right-distance + 0.5rem);
+      border-radius: 50%;
+      background-color: $primary-color-background;
+      backdrop-filter: blur(0.3px);
+      position: fixed;
+      z-index: 9998;
+      transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    .nav-checkbox:checked ~ .nav-background {
+      transform: scale(50);
+    }
+    nav {
+      height: 100vh;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 2rem 0 2rem;
+        gap: 5rem;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        li {
+          display: block;
+          color: white;
+          font-size: 2rem;
+        }
+      }
+    }
+    .nav-checkbox:checked ~ nav {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+      width: 100%;
+    }
   }
 }
 
@@ -297,11 +412,11 @@ h2 {
   .testimonials-section-testimonial-container {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 5rem;
     figure {
       p {
         font-size: 1.2rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1.6rem;
       }
       div {
         display: flex;

@@ -15,13 +15,43 @@
     />
   </head>
   <body>
+    <!-- HEADER AND NAVIGATION -->
     <header class="header centerFlex">
       <img
         src="./img/logo/MonevskiMediaLogo.png"
         alt="MonevskiMedia logo"
         class="header-logo"
       />
-      <nav class="nav"></nav>
+      <div class="nav">
+        <input
+          type="checkbox"
+          name="nav-toggle"
+          id="nav-toggle"
+          class="nav-checkbox"
+        />
+        <label for="nav-toggle" class="nav-button">
+          <span class="nav-icon"></span>
+        </label>
+        <div class="nav-background"></div>
+        <nav>
+          <ul>
+            <li>
+              <a class="nav-link" href="#how-it-works-section"
+                >KAKO FUNKCIONIŠE SARADNJA</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="#examples-section">PRIMERI IZGLEDA</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#services-section">PAKETI USLUGA</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#testimonials-section">RECENZIJE</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <!-- HERO SECTION -->
@@ -42,8 +72,8 @@
         </div>
       </section>
 
-      <!-- HOW IT WORKS SECTION BEO LOCKED-->
-      <section class="how-it-works-section">
+      <!-- HOW IT WORKS SECTION-->
+      <section class="how-it-works-section" id="how-it-works-section">
         <h2>Kako funkcioniše saradnja sa Monevski Media?</h2>
 
         <p class="how-it-works-section-introduction">
@@ -221,8 +251,8 @@
         </p>
       </section>
 
-      <!-- EXAMPLES SECTION BEO CRVEN-->
-      <section id="examples-section" class="examples-section">
+      <!-- EXAMPLES SECTION-->
+      <section class="examples-section" id="examples-section">
         <h2>Primeri izgleda feeda</h2>
         <div class="examples-section-examples-container">
           <!-- EXAMPLE 1 -->
@@ -414,8 +444,8 @@
         </div>
       </section>
 
-      <!-- TESTIMONIALS SECTION CRVEN-->
-      <section class="testimonials-section">
+      <!-- TESTIMONIALS SECTION-->
+      <section class="testimonials-section" id="testimonials-section">
         <h2>Recenzije</h2>
         <div class="testimonials-section-testimonial-container">
           <figure>
@@ -481,8 +511,8 @@
         </div>
       </section>
 
-      <!-- SERVICES SECTION BEO-->
-      <section class="services-section">
+      <!-- SERVICES SECTION-->
+      <section class="services-section" id="services-section">
         <h2>Paketi usluga</h2>
         <div class="services-section-container">
           <!-- PACKAGE 1 -->

@@ -1,3 +1,12 @@
+//// NAVIGATION LOGIC
+
+//// COLLAPSING NAV ON LINK CLICK
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.getElementById("nav-toggle").checked = false;
+  });
+});
+
 //// Adding Instagram view on examples section
 
 const exampleSectionElement = document.getElementById("examples-section");
@@ -99,5 +108,18 @@ function collapseParagraph(
       paragraphContainerElement.scrollHeight + "px";
   } else {
     paragraphContainerElement.style.maxHeight = "0px";
+  }
+}
+
+//// TESTING
+
+function test() {
+  const checkboxEl = document.getElementById("nav-toggle");
+
+  console.log(checkboxEl);
+  if (checkboxEl.checked) {
+    console.log("checked");
+  } else {
+    console.log("not checked");
   }
 }
