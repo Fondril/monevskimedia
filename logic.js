@@ -111,15 +111,21 @@ function collapseParagraph(
   }
 }
 
+//// UPDATING FOOTER YEAR TO CURRENT
+
+const footerYearElement = document.getElementById("footer-year");
+const currentYear = new Date().getFullYear();
+footerYearElement.innerText = currentYear;
+
 //// TESTING
 
-function test() {
-  const checkboxEl = document.getElementById("nav-toggle");
+// function test() {
+//   const checkboxEl = document.getElementById("nav-toggle");
 
-  console.log(checkboxEl);
-  if (checkboxEl.checked) {
-    console.log("checked");
-  } else {
-    console.log("not checked");
-  }
-}
+//   console.log(checkboxEl);
+//   if (checkboxEl.checked) {
+//     console.log("checked");
+//   } else {
+//     console.log("not checked");
+//   }
+// }

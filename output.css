@@ -462,4 +462,42 @@ h2 {
   font-size: 1.4rem;
 }
 
+/*////////// FOOTER SECTION //////////*/
+.footer-section {
+  padding: 6.4rem 2rem 6.4rem 2rem;
+  border-top: 1px solid rgba(93, 4, 4, 0.5882352941);
+  display: flex;
+  justify-content: space-around;
+}
+.footer-section .footer-section-left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer-section .footer-section-left-container img {
+  width: 16rem;
+}
+.footer-section .footer-section-right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 14rem;
+}
+.footer-section .footer-section-right-container p {
+  font-size: 1.6rem;
+}
+.footer-section .footer-section-right-container div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.footer-section .footer-section-right-container div img {
+  width: 2rem;
+  height: 2rem;
+  filter: grayscale(0.7);
+}
+.footer-section .footer-section-right-container a {
+  font-size: 1.3rem;
+}
+
 /*# sourceMappingURL=output.css.map */

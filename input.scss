@@ -23,6 +23,7 @@ Paragraph default: 1.6
 --- 02 COLORS
 */
 $primary-color: #5d0404;
+$primary-color-footer-border: #5d040496;
 $primary-color-background: #5d0404db;
 /*
 - Tints:
@@ -476,6 +477,45 @@ $nav-button-right-distance: 3rem;
           font-size: 1.4rem;
         }
       }
+    }
+  }
+}
+
+/*////////// FOOTER SECTION //////////*/
+
+.footer-section {
+  padding: 6.4rem 2rem 6.4rem 2rem;
+  border-top: 1px solid $primary-color-footer-border;
+  display: flex;
+  justify-content: space-around;
+  .footer-section-left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    img {
+      width: 16rem;
+    }
+  }
+  .footer-section-right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 14rem;
+    p {
+      font-size: 1.6rem;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      img {
+        width: 2rem;
+        height: 2rem;
+        filter: grayscale(0.7);
+      }
+    }
+    a {
+      font-size: 1.3rem;
     }
   }
 }
