@@ -27,7 +27,9 @@ $primary-color-footer-border: #5d040496;
 $primary-color-background: #5d0404db;
 /*
 - Tints:
-
+*/
+$primary-color-tint1: #ae8282;
+/*
 - Shades: 
 */
 $primary-color-shade1: #4a0303;
@@ -281,14 +283,15 @@ $nav-button-right-distance: 3rem;
 
 .how-it-works-section {
   padding: 4.8rem 2rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   h2 {
     line-height: 1.2;
+    margin-bottom: 1rem;
   }
   .how-it-works-section-introduction {
-    font-size: 1.8rem;
-    line-height: 1.4;
-    margin-bottom: 3.2rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 6.4rem;
   }
 
   .how-it-works-section-step-container {
@@ -298,47 +301,52 @@ $nav-button-right-distance: 3rem;
     .how-it-works-section-step {
       transition: all 1ms;
       height: fit-content;
+      border-bottom: 1px solid $primary-color-footer-border;
       .how-it-works-section-step-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
+        h3 {
+          letter-spacing: 0.5px;
+          line-height: 1.4;
+        }
         img {
           transition: all 500ms;
-          width: 3rem;
-          height: 3rem;
-        }
-        ion-icon {
-          color: #5d0404;
-          padding: 0;
-          margin: 0;
-          min-width: 3rem;
-          min-height: 3rem;
-          max-width: 3rem;
-          max-height: 3rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          filter: invert(9%) sepia(83%) saturate(3363%) hue-rotate(351deg)
+            brightness(81%) contrast(105%);
         }
       }
-
       .how-it-works-section-step-explanation-container {
         max-height: 0;
         overflow: hidden;
         transition: all 0.5s;
         opacity: 0;
         p {
-          line-height: 1.4;
+          line-height: 1.8;
+          color: #1b1b1b;
         }
       }
       .how-it-works-section-step-explanation-open {
-        max-height: 500px;
+        padding: 0 0.5rem 1rem 0.5rem;
+        max-height: 700px;
         opacity: 1;
+        background: rgb(93, 4, 4);
+        background: linear-gradient(
+          0deg,
+          rgba(93, 4, 4, 0.1026785714285714) 0%,
+          rgba(93, 4, 4, 0) 100%
+        );
       }
     }
   }
 
   .how-it-works-section-conclusion {
-    font-size: 1.8rem;
-    line-height: 1.4;
-    margin-top: 3.2rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-top: 6.4rem;
   }
 }
 
@@ -446,35 +454,36 @@ $nav-button-right-distance: 3rem;
 /*////////// SERVICES SECTION //////////*/
 
 .services-section {
-  padding: 4.8rem 2rem;
+  padding: 4.8rem 0;
   font-size: 1.6rem;
+  h2 {
+    padding: 0 2rem;
+  }
   .services-section-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 4.8rem;
     .services-section-package {
       background-color: #6d1d1d;
+      width: 100%;
       color: white;
       display: flex;
       flex-direction: column;
-      border-radius: 9px;
       padding: 4rem 2rem;
       h4 {
         text-align: center;
         font-size: 2.4rem;
         margin-bottom: 2.4rem;
       }
-      h3 {
-        text-align: center;
-        font-size: 3.6rem;
-        margin-bottom: 4.8rem;
-      }
       .services-section-package-details {
         display: flex;
         flex-direction: column;
         gap: 4rem;
         p {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+          line-height: 1.2;
         }
       }
     }

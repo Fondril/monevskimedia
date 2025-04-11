@@ -42,16 +42,24 @@ exampleSectionObserver.observe(exampleSectionElement);
 function expandParagraph(
   stepElementID,
   chevronElementID,
-  paragraphContainerElementID
+  paragraphContainerElementID,
+  stepHeaderElementID
 ) {
   //// CHANGING FUNCTION FROM EXPAND TO COLLAPSE
   document.getElementById(stepElementID).onclick = function () {
     collapseParagraph(
       stepElementID,
       chevronElementID,
-      paragraphContainerElementID
+      paragraphContainerElementID,
+      stepHeaderElementID
     );
   };
+
+  //// CHANGING STEP HEADER COLOR
+  document.getElementById(stepHeaderElementID).style.color = "#5d0404";
+  document.getElementById(chevronElementID).style.filter =
+    `invert(9%) sepia(83%) saturate(3363%) hue-rotate(351deg)
+            brightness(81%) contrast(105%)`;
 
   //// ROTATING CHEVRON
   document.getElementById(chevronElementID).style.transform = "rotateX(180deg)";
@@ -69,7 +77,7 @@ function expandParagraph(
     )
   ) {
     paragraphContainerElement.style.maxHeight =
-      paragraphContainerElement.scrollHeight + "px";
+      paragraphContainerElement.scrollHeight + 30 + "px";
   } else {
     paragraphContainerElement.style.maxHeight = "0px";
   }
@@ -78,16 +86,22 @@ function expandParagraph(
 function collapseParagraph(
   stepElementID,
   chevronElementID,
-  paragraphContainerElementID
+  paragraphContainerElementID,
+  stepHeaderElementID
 ) {
   //// CHANGING FUNCTION FROM COLLAPSE TO EXPAND
   document.getElementById(stepElementID).onclick = function () {
     expandParagraph(
       stepElementID,
       chevronElementID,
-      paragraphContainerElementID
+      paragraphContainerElementID,
+      stepHeaderElementID
     );
   };
+
+  //// CHANGING STEP HEADER COLOR
+  document.getElementById(stepHeaderElementID).style.color = "inherit";
+  document.getElementById(chevronElementID).style.filter = "inherit";
 
   //// ROTATING CHEVRON
   document.getElementById(chevronElementID).style.transform = "rotateX(360deg)";
