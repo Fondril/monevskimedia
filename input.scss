@@ -44,9 +44,9 @@ $primary-color-shade1: #4a0303;
 #333
 
 --- 05 SHADOWS
-
-0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-
+*/
+$box-shadow-pop: 0 2px 3px rgba(0, 0, 0, 0.075);
+/*
 --- 06 BORDER-RADIUS
 
 Default: 9px
@@ -353,14 +353,13 @@ $nav-button-right-distance: 3rem;
 /*////////// EXAMPLES SECTION //////////*/
 
 .examples-section {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   font-weight: 500;
   padding: 4.8rem 0;
+  background-color: #fff;
   h2 {
     padding: 0 2rem;
   }
   .examples-section-examples-container {
-    background-color: #fff;
     .example-section-instagram-profile {
       padding-top: 3.6rem;
       padding-bottom: 3.6rem;
@@ -385,8 +384,7 @@ $nav-button-right-distance: 3rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    img,
-    ion-icon {
+    img {
       height: 4rem;
       width: 4rem;
       padding: 1rem;
@@ -416,8 +414,7 @@ $nav-button-right-distance: 3rem;
 
 .testimonials-section {
   padding: 4.8rem 2rem;
-  background-color: $primary-color;
-  color: white;
+  color: #333;
   .testimonials-section-testimonial-container {
     display: flex;
     flex-direction: column;
@@ -449,6 +446,66 @@ $nav-button-right-distance: 3rem;
       }
     }
   }
+  .testimonials-section-testimonial-container1 {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    gap: 4rem;
+    // gap: 5rem;
+    figure {
+      min-width: calc(100vw - 4rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1rem;
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 1.6rem;
+      }
+      blockquote {
+        font-size: 1.3rem;
+        font-weight: 500;
+        background-color: #f5f5f5;
+        box-shadow: $box-shadow-pop;
+        color: #333;
+        border-radius: 11px;
+        padding: 0.5rem 0.8rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        overflow: visible;
+        .testimonials-section-upper-quotes-container {
+          height: 2rem;
+          overflow: visible;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-end;
+          img {
+            filter: invert(9%) sepia(83%) saturate(3363%) hue-rotate(351deg)
+              brightness(81%) contrast(105%);
+          }
+        }
+        .testimonials-section-lower-quotes-container {
+          height: 2rem;
+          overflow: visible;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-start;
+          img {
+            transform: rotate(180deg);
+            filter: invert(9%) sepia(83%) saturate(3363%) hue-rotate(351deg)
+              brightness(81%) contrast(105%);
+          }
+        }
+      }
+      img {
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
 }
 
 /*////////// SERVICES SECTION //////////*/
@@ -456,6 +513,7 @@ $nav-button-right-distance: 3rem;
 .services-section {
   padding: 4.8rem 0;
   font-size: 1.6rem;
+  background-color: #fff;
   h2 {
     padding: 0 2rem;
   }

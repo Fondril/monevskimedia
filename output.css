@@ -39,9 +39,8 @@ Paragraph default: 1.6
 #333
 
 --- 05 SHADOWS
-
-0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-
+*/
+/*
 --- 06 BORDER-RADIUS
 
 Default: 9px
@@ -334,15 +333,12 @@ h2 {
 
 /*////////// EXAMPLES SECTION //////////*/
 .examples-section {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   font-weight: 500;
   padding: 4.8rem 0;
+  background-color: #fff;
 }
 .examples-section h2 {
   padding: 0 2rem;
-}
-.examples-section .examples-section-examples-container {
-  background-color: #fff;
 }
 .examples-section .examples-section-examples-container .example-section-instagram-profile {
   padding-top: 3.6rem;
@@ -367,8 +363,7 @@ h2 {
   justify-content: space-around;
   align-items: center;
 }
-.examples-section .exampleSectionHeaderAndFooter img,
-.examples-section .exampleSectionHeaderAndFooter ion-icon {
+.examples-section .exampleSectionHeaderAndFooter img {
   height: 4rem;
   width: 4rem;
   padding: 1rem;
@@ -395,8 +390,7 @@ h2 {
 /*////////// TESTIMONIALS SECTION //////////*/
 .testimonials-section {
   padding: 4.8rem 2rem;
-  background-color: #5d0404;
-  color: white;
+  color: #333;
 }
 .testimonials-section .testimonials-section-testimonial-container {
   display: flex;
@@ -427,11 +421,69 @@ h2 {
   width: 4rem;
   height: 4rem;
 }
+.testimonials-section .testimonials-section-testimonial-container1 {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  gap: 4rem;
+}
+.testimonials-section .testimonials-section-testimonial-container1 figure {
+  min-width: calc(100vw - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.testimonials-section .testimonials-section-testimonial-container1 figure p {
+  font-size: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+.testimonials-section .testimonials-section-testimonial-container1 figure blockquote {
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.075);
+  color: #333;
+  border-radius: 11px;
+  padding: 0.5rem 0.8rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  overflow: visible;
+}
+.testimonials-section .testimonials-section-testimonial-container1 figure blockquote .testimonials-section-upper-quotes-container {
+  height: 2rem;
+  overflow: visible;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.testimonials-section .testimonials-section-testimonial-container1 figure blockquote .testimonials-section-upper-quotes-container img {
+  filter: invert(9%) sepia(83%) saturate(3363%) hue-rotate(351deg) brightness(81%) contrast(105%);
+}
+.testimonials-section .testimonials-section-testimonial-container1 figure blockquote .testimonials-section-lower-quotes-container {
+  height: 2rem;
+  overflow: visible;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.testimonials-section .testimonials-section-testimonial-container1 figure blockquote .testimonials-section-lower-quotes-container img {
+  transform: rotate(180deg);
+  filter: invert(9%) sepia(83%) saturate(3363%) hue-rotate(351deg) brightness(81%) contrast(105%);
+}
+.testimonials-section .testimonials-section-testimonial-container1 figure img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
 
 /*////////// SERVICES SECTION //////////*/
 .services-section {
   padding: 4.8rem 0;
   font-size: 1.6rem;
+  background-color: #fff;
 }
 .services-section h2 {
   padding: 0 2rem;
