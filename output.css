@@ -389,59 +389,36 @@ h2 {
 
 /*////////// TESTIMONIALS SECTION //////////*/
 .testimonials-section {
-  padding: 4.8rem 2rem;
+  padding: 4.8rem 0rem;
   color: #333;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* Hide scrollbar for IE, Edge and Firefox */
+}
+.testimonials-section h2 {
+  padding-left: 2rem;
 }
 .testimonials-section .testimonials-section-testimonial-container {
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  display: flex;
+  transition: all 150ms ease-in;
+}
+.testimonials-section .testimonials-section-testimonial-container figure {
+  scroll-snap-align: start;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem 0 2rem;
 }
 .testimonials-section .testimonials-section-testimonial-container figure p {
   font-size: 1.2rem;
   margin-bottom: 1.6rem;
 }
-.testimonials-section .testimonials-section-testimonial-container figure div {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.8rem;
-  padding-right: 3rem;
-}
-.testimonials-section .testimonials-section-testimonial-container figure div blockquote {
-  font-size: 1.3rem;
-  font-weight: 500;
-  background-color: #eee;
-  color: #333;
-  border-radius: 11px;
-  padding: 0.8rem;
-  line-height: 1.8;
-}
-.testimonials-section .testimonials-section-testimonial-container figure div img {
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-}
-.testimonials-section .testimonials-section-testimonial-container1 {
-  display: flex;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: visible;
-  gap: 4rem;
-}
-.testimonials-section .testimonials-section-testimonial-container1 figure {
-  min-width: calc(100vw - 4rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding-top: 1rem;
-}
-.testimonials-section .testimonials-section-testimonial-container1 figure p {
-  font-size: 1.2rem;
-  margin-bottom: 1.6rem;
-}
-.testimonials-section .testimonials-section-testimonial-container1 figure blockquote {
-  font-size: 1.3rem;
+.testimonials-section .testimonials-section-testimonial-container figure blockquote {
+  font-size: 1.4rem;
   font-weight: 500;
   background-color: #f5f5f5;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.075);
@@ -452,31 +429,82 @@ h2 {
   margin-bottom: 2rem;
   overflow: visible;
 }
-.testimonials-section .testimonials-section-testimonial-container1 figure blockquote .testimonials-section-upper-quotes-container {
+.testimonials-section .testimonials-section-testimonial-container figure blockquote .testimonials-section-upper-quotes-container {
   height: 2rem;
   overflow: visible;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
 }
-.testimonials-section .testimonials-section-testimonial-container1 figure blockquote .testimonials-section-upper-quotes-container img {
+.testimonials-section .testimonials-section-testimonial-container figure blockquote .testimonials-section-upper-quotes-container img {
   filter: invert(9%) sepia(83%) saturate(3363%) hue-rotate(351deg) brightness(81%) contrast(105%);
 }
-.testimonials-section .testimonials-section-testimonial-container1 figure blockquote .testimonials-section-lower-quotes-container {
+.testimonials-section .testimonials-section-testimonial-container figure blockquote .testimonials-section-lower-quotes-container {
   height: 2rem;
   overflow: visible;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
 }
-.testimonials-section .testimonials-section-testimonial-container1 figure blockquote .testimonials-section-lower-quotes-container img {
+.testimonials-section .testimonials-section-testimonial-container figure blockquote .testimonials-section-lower-quotes-container img {
   transform: rotate(180deg);
   filter: invert(9%) sepia(83%) saturate(3363%) hue-rotate(351deg) brightness(81%) contrast(105%);
 }
-.testimonials-section .testimonials-section-testimonial-container1 figure img {
+.testimonials-section .testimonials-section-testimonial-container figure img {
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
+}
+.testimonials-section .testimonials-section-testimonial-container::-webkit-scrollbar {
+  display: none;
+}
+.testimonials-section .testimonials-section-testimonial-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.testimonials-section .testimonials-section-slider-navigation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4.8rem;
+}
+.testimonials-section .testimonials-section-slider-navigation-container .testimonials-section-slider-navigation-chevrons {
+  transition: all 150ms;
+}
+.testimonials-section .testimonials-section-slider-navigation-container .testimonials-section-slider-navigation-chevrons img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.testimonials-section .testimonials-section-slider-navigation-container .testimonials-section-slider-navigation-left-chevron img {
+  transform: rotate(90deg);
+}
+.testimonials-section .testimonials-section-slider-navigation-container .testimonials-section-slider-navigation-right-chevron img {
+  transform: rotate(-90deg);
+}
+.testimonials-section .testimonials-section-slider-navigation-container .testimonials-section-slider-navigation-circles-container {
+  display: flex;
+  gap: 1rem;
+}
+.testimonials-section .testimonials-section-slider-navigation-container .testimonials-section-slider-navigation-circles-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid #5d0404;
+  border-radius: 50%;
+  transition: all 150ms;
+}
+.testimonials-section .testimonials-section-slider-navigation-container .testimonials-section-slider-navigation-circles-container div .testimonials-section-slider-navigation-circles-default {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: none;
+  border-radius: 50%;
+  background-color: none;
+}
+.testimonials-section .testimonials-section-slider-navigation-container .testimonials-section-slider-navigation-circles-container div .testimonials-section-slider-navigation-circles-active {
+  background-color: #5d0404;
 }
 
 /*////////// SERVICES SECTION //////////*/
