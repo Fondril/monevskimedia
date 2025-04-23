@@ -191,6 +191,29 @@ document
     updateNewCarouselTracking();
   });
 
+testimonialsContainer.addEventListener("scroll", () => {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  testimonialsArrayList.forEach((testimonial, index) => {
+    const distance = Math.abs(
+      testimonial.offsetLeft - testimonialsContainer.scrollLeft
+    );
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  // Only update if index actually changed
+  if (closestIndex !== currentTestimonialsIndex) {
+    updateOldCarouselTracking();
+    currentTestimonialsIndex = closestIndex;
+    updateNewCarouselTracking();
+  }
+});
+
 //// UPDATING FOOTER YEAR TO CURRENT
 
 const footerYearElement = document.getElementById("footer-year");
@@ -200,12 +223,6 @@ footerYearElement.innerText = currentYear;
 //// TESTING
 
 // function test() {
-//   const checkboxEl = document.getElementById("nav-toggle");
-
-//   console.log(checkboxEl);
-//   if (checkboxEl.checked) {
-//     console.log("checked");
-//   } else {
-//     console.log("not checked");
-//   }
+//   let object = { a: 1 };
+//   console.log(object);
 // }
