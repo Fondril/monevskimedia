@@ -7,36 +7,6 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   });
 });
 
-//// Adding Instagram view on examples section
-
-const exampleSectionElement = document.getElementById("examples-section");
-const exampleSectionObserver = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
-    if (ent.isIntersecting === true) {
-      document
-        .getElementById("example-section-header")
-        .classList.add("exampleSectionHeaderShow");
-      document
-        .getElementById("example-section-footer")
-        .classList.add("exampleSectionFooterShow");
-    }
-    if (ent.isIntersecting === false) {
-      document
-        .getElementById("example-section-header")
-        .classList.remove("exampleSectionHeaderShow");
-      document
-        .getElementById("example-section-footer")
-        .classList.remove("exampleSectionFooterShow");
-    }
-  },
-  {
-    root: null,
-    threshold: 0.35,
-  }
-);
-exampleSectionObserver.observe(exampleSectionElement);
-
 //// EXPANDING AND COLLAPSING HOW IT WORKS SECTION STEPS
 
 function expandParagraph(
@@ -124,6 +94,93 @@ function collapseParagraph(
     paragraphContainerElement.style.maxHeight = "0px";
   }
 }
+
+//// EXAMPLES SECTION
+
+let currentExampleIndex = 0;
+const examplesArrayList = document.querySelectorAll(".example");
+const examplesArrayListLength = examplesArrayList.length - 1;
+const examplesContainer = document.getElementById(
+  "examples-section-examples-container"
+);
+function updateNewExamplesCarouselTracking() {
+  let targetId = "example-circle" + currentExampleIndex;
+  let target = document.getElementById(targetId);
+  target.classList.add("example-section-slider-navigation-circles-active");
+}
+function updateOldExamplesCarouselTracking() {
+  let targetId = "example-circle" + currentExampleIndex;
+  let target = document.getElementById(targetId);
+  target.classList.remove("example-section-slider-navigation-circles-active");
+}
+document
+  .getElementById("example-section-slider-right")
+  .addEventListener("click", function (e) {
+    e.preventDefault(); // stop vertical scroll
+
+    updateOldExamplesCarouselTracking();
+    if (currentExampleIndex < examplesArrayListLength) {
+      currentExampleIndex++;
+    } else {
+      currentExampleIndex = 0;
+    }
+
+    let targetId = "example" + currentExampleIndex;
+    const target = document.getElementById(targetId);
+
+    // Scroll horizontally to the target
+    examplesContainer.scrollTo({
+      left: target.offsetLeft,
+      behavior: "smooth",
+    });
+    updateNewExamplesCarouselTracking();
+  });
+document
+  .getElementById("example-section-slider-left")
+  .addEventListener("click", function (e) {
+    e.preventDefault(); // stop vertical scroll
+
+    updateOldExamplesCarouselTracking();
+
+    if (currentExampleIndex == 0) {
+      currentExampleIndex = examplesArrayListLength;
+    } else {
+      currentExampleIndex--;
+    }
+
+    let targetId = "example" + currentExampleIndex;
+    const target = document.getElementById(targetId);
+
+    // Scroll horizontally to the target
+    examplesContainer.scrollTo({
+      left: target.offsetLeft,
+      behavior: "smooth",
+    });
+    updateNewExamplesCarouselTracking();
+  });
+
+examplesContainer.addEventListener("scroll", () => {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  examplesArrayList.forEach((example, index) => {
+    const distance = Math.abs(
+      example.offsetLeft - examplesContainer.scrollLeft
+    );
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  // Only update if index actually changed
+  if (closestIndex !== currentExampleIndex) {
+    updateOldExamplesCarouselTracking();
+    currentExampleIndex = closestIndex;
+    updateNewExamplesCarouselTracking();
+  }
+});
 
 //// TESTIMONIALS CAROUSEL
 
